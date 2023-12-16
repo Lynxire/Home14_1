@@ -19,11 +19,12 @@ public class Task2 {
 
                 if ((split[j].startsWith("docnum")||split[j].startsWith("content")) && split[j].matches("\\w{1,15}"))   {
 
-                    Files.writeString(Path.of("src/task2/result-good.txt"),split[j], StandardOpenOption.APPEND);
+                    Files.writeString(Path.of("src/task2/result-good.txt"),split[j]+"\n", StandardOpenOption.APPEND);
+
 
                 }
                 else {
-                    Files.writeString(Path.of("src/task2/result-faild.txt"),split[j], StandardOpenOption.APPEND);
+                    Files.writeString(Path.of("src/task2/result-faild.txt"),split[j]+"\n", StandardOpenOption.APPEND);
                 }
 
             }
